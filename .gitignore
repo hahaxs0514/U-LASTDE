@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+*.pth
+*.pt
+*.ckpt
+*.partial
+data/processed_dataset/**/*.npy
+data/processed_dataset/**/*.npz
+*.zip
+*.7z
+.DS_Store
