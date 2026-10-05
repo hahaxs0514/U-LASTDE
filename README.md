@@ -9,14 +9,29 @@ U-LASTDE is a U-shaped spatiotemporal model for traffic accident detection on ro
 
 ## Installation
 
-Use Python 3.10 or later and install the dependencies in a virtual environment:
+Clone the repository and create a virtual environment with Python 3.10 or later:
 
 ```bash
+git clone https://github.com/hahaxs0514/U-LASTDE.git
+cd U-LASTDE
 python -m venv .venv
-# Linux / macOS:
+```
+
+Activate the environment on Linux or macOS:
+
+```bash
 source .venv/bin/activate
-# Windows PowerShell:
-# .\.venv\Scripts\Activate.ps1
+```
+
+Or activate it in Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Install the dependencies:
+
+```bash
 python -m pip install -r requirements.txt
 ```
 
@@ -36,18 +51,20 @@ U-LASTDE/
 
 ## Data and checkpoints
 
-Place the processed data under `data/processed_dataset/`. Each split contains the same four files:
+Download [`processed_dataset.zip` from Google Drive](https://drive.google.com/file/d/1IvN61ber8X4d_RCnULB5feISaoZhIaMz/view?usp=drive_link). Extract its contents into `data/processed_dataset/` in the cloned repository. The archive already contains the `train/`, `val/`, and `test/` folders at its top level, so the resulting paths should look like this:
 
 ```text
 data/processed_dataset/
 ├── train/
-├── val/
-└── test/
-    ├── traffic_data.npy
-    ├── mask_data.npy
-    ├── labels.npy
-    └── adjacency_matrices.npy
+│   ├── traffic_data.npy
+│   ├── mask_data.npy
+│   ├── labels.npy
+│   └── adjacency_matrices.npy
+├── val/                     # Same four files
+└── test/                    # Same four files
 ```
+
+For example, `data/processed_dataset/test/traffic_data.npy` should exist after extraction. Avoid an extra `processed_dataset/` folder inside that directory.
 
 The default configuration expects the following NumPy arrays, where `N` is the number of samples in a split:
 
