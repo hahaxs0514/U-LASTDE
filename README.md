@@ -58,7 +58,7 @@ The default configuration expects the following NumPy arrays, where `N` is the n
 | `labels.npy` | `(N, 60, 20, 2)` |
 | `adjacency_matrices.npy` | `(N, 20, 20)` |
 
-Put the pretrained checkpoint at `checkpoints/our_best.pth`, or supply its path with `--checkpoint`. The default configuration includes the paper model settings and evaluation thresholds.
+The pretrained checkpoint is included at `checkpoints/our_best.pth`; you can also supply another path with `--checkpoint`. The default configuration includes the paper model settings and evaluation thresholds.
 
 ## Usage
 
